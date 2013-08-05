@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">19.EAuction</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="user_name">用户名</string>
+    <string name="pass_word">密    码</string>
+    <string name="login">登录</string>
+    <string name="cancel">取消</string>
+    <string name="login_welcome">欢迎使用本系统-请先登录!</string>
+
+</resources>

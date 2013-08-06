@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 
+import com.cnblsp2.study.mylayout.absolutelayout.AbsoluteLayoutMainActivity;
 import com.cnblsp2.study.mylayout.framelayout.FrameLayoutMainActivity;
 import com.cnblsp2.study.mylayout.linearlayout.LinearLayoutMainActivity;
 import com.cnblsp2.study.mylayout.relativelayout.RelativeLayoutMainActivity;
@@ -51,6 +52,15 @@ public class MainActivity extends Activity {
 			@Override
 			public void onClick(View v) {
 				Intent intent = new Intent(MainActivity.this, RelativeLayoutMainActivity.class);
+				startActivity(intent);
+			}
+		});
+
+		// mainactivity_mainabsolutelayout_button
+		((Button) this.findViewById(R.id.mainactivity_mainabsolutelayout_button)).setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				Intent intent = new Intent(MainActivity.this, AbsoluteLayoutMainActivity.class);
 				startActivity(intent);
 			}
 		});

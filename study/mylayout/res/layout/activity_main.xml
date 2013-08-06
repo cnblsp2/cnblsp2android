@@ -30,6 +30,11 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:text="FrameLayout" />
+         <Button
+            android:id="@+id/mainactivity_mainabsolutelayout_button"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="FrameLayout" />
         
     </LinearLayout>
 

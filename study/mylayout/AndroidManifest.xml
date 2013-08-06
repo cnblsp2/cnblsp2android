@@ -58,6 +58,14 @@
             android:name="com.cnblsp2.study.mylayout.relativelayout.RelativeLayoutMeihuaActivity"
             android:label="RelativeLayoutMeihuaActivity" >
         </activity>
+        <activity
+            android:name="com.cnblsp2.study.mylayout.absolutelayout.AbsoluteLayoutMainActivity"
+            android:label="AbsoluteLayoutMainActivity" >
+        </activity>
+        <activity
+            android:name="com.cnblsp2.study.mylayout.absolutelayout.AbsoluteLayoutLoginActivity"
+            android:label="AbsoluteLayoutLoginActivity" >
+        </activity>
     </application>
 
 </manifest>

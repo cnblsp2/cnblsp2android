@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 
+import com.cnblsp2.study.mylayout.framelayout.FrameLayoutMainActivity;
 import com.cnblsp2.study.mylayout.linearlayout.LinearLayoutMainActivity;
 import com.cnblsp2.study.mylayout.tablelayout.TableLayoutMainActivity;
 
@@ -35,6 +36,16 @@ public class MainActivity extends Activity {
 				startActivity(intent);
 			}
 		});
+
+		// mainactivity_mainframelayout_button
+		((Button) this.findViewById(R.id.mainactivity_mainframelayout_button)).setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				Intent intent = new Intent(MainActivity.this, FrameLayoutMainActivity.class);
+				startActivity(intent);
+			}
+		});
+
 	}
 
 	@Override

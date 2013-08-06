@@ -1,0 +1,63 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <!-- 依次定义7个TextView，先定义TextView位于底层 -->
+
+    <TextView
+        android:id="@+id/activity_framelayout_ex1_View01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#ff0000"
+        android:height="50px"
+        android:width="210px" />
+
+    <TextView
+        android:id="@+id/activity_framelayout_ex1_View02"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#dd0000"
+        android:height="50px"
+        android:width="180px" />
+
+    <TextView
+        android:id="@+id/activity_framelayout_ex1_View03"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#bb0000"
+        android:height="50px"
+        android:width="150px" />
+
+    <TextView
+        android:id="@+id/activity_framelayout_ex1_View04"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#990000"
+        android:height="50px"
+        android:width="120px" />
+
+    <TextView
+        android:id="@+id/activity_framelayout_ex1_View05"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#770000"
+        android:height="50px"
+        android:width="90px" />
+
+    <TextView
+        android:id="@+id/activity_framelayout_ex1_View06"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#550000"
+        android:height="50px"
+        android:width="60px" />
+
+    <TextView
+        android:id="@+id/activity_framelayout_ex1_View07"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#330000"
+        android:height="50px"
+        android:width="30px" />
+
+</FrameLayout>

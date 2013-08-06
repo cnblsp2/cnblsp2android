@@ -9,22 +9,16 @@
         android:orientation="vertical" >
 
         <Button
-            android:id="@+id/mainactivity_mainlinearlayout_button"
+            android:id="@+id/framelayoutactivity_example1_btn"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="LinearLayout" />
+            android:text="示例1" />
         
         <Button
-            android:id="@+id/mainactivity_maintablelayout_button"
+            android:id="@+id/framelayoutactivity_nhd_btn"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="TableLayout" />
-        <Button
-            android:id="@+id/mainactivity_mainframelayout_button"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:text="FrameLayout" />
-        
+            android:text="霓虹灯效果" />
     </LinearLayout>
 
 </ScrollView>

@@ -38,6 +38,18 @@
             android:name="com.cnblsp2.study.mylayout.tablelayout.TableLayoutEx1Activity"
             android:label="TableLayoutEx1Activity" >
         </activity>
+        <activity
+            android:name="com.cnblsp2.study.mylayout.framelayout.FrameLayoutMainActivity"
+            android:label="FrameLayoutMainActivity" >
+        </activity>
+        <activity
+            android:name="com.cnblsp2.study.mylayout.framelayout.FrameLayoutEx1Activity"
+            android:label="FrameLayoutEx1Activity" >
+        </activity>
+        <activity
+            android:name="com.cnblsp2.study.mylayout.framelayout.FrameLayoutNHDActivity"
+            android:label="霓虹灯效果" >
+        </activity>
     </application>
 
 </manifest>

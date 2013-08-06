@@ -50,6 +50,14 @@
             android:name="com.cnblsp2.study.mylayout.framelayout.FrameLayoutNHDActivity"
             android:label="霓虹灯效果" >
         </activity>
+        <activity
+            android:name="com.cnblsp2.study.mylayout.relativelayout.RelativeLayoutMainActivity"
+            android:label="RelativeLayoutMainActivity" >
+        </activity>
+        <activity
+            android:name="com.cnblsp2.study.mylayout.relativelayout.RelativeLayoutMeihuaActivity"
+            android:label="RelativeLayoutMeihuaActivity" >
+        </activity>
     </application>
 
 </manifest>

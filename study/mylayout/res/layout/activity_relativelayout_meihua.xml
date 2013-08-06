@@ -1,0 +1,46 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <!-- 定义该组件位于容器中间 -->
+
+    <TextView
+        android:id="@+id/activity_relativelayout_meihua_view01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@drawable/leaf" />
+
+    <!-- 定义该组件位于view01组件的上方 -->
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/activity_relativelayout_meihua_view01"
+        android:layout_alignLeft="@id/activity_relativelayout_meihua_view01"
+        android:background="@drawable/leaf" />
+
+    <!-- 定义该组件位于view01正文 -->
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/activity_relativelayout_meihua_view01"
+        android:layout_below="@id/activity_relativelayout_meihua_view01"
+        android:background="@drawable/leaf" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/activity_relativelayout_meihua_view01"
+        android:layout_toLeftOf="@id/activity_relativelayout_meihua_view01"
+        android:background="@drawable/leaf" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/activity_relativelayout_meihua_view01"
+        android:layout_toRightOf="@id/activity_relativelayout_meihua_view01"
+        android:background="@drawable/leaf" />
+
+</RelativeLayout>

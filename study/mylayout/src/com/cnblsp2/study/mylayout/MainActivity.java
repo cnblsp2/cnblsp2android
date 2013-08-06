@@ -10,6 +10,7 @@ import android.widget.Button;
 
 import com.cnblsp2.study.mylayout.framelayout.FrameLayoutMainActivity;
 import com.cnblsp2.study.mylayout.linearlayout.LinearLayoutMainActivity;
+import com.cnblsp2.study.mylayout.relativelayout.RelativeLayoutMainActivity;
 import com.cnblsp2.study.mylayout.tablelayout.TableLayoutMainActivity;
 
 public class MainActivity extends Activity {
@@ -45,7 +46,14 @@ public class MainActivity extends Activity {
 				startActivity(intent);
 			}
 		});
-
+		// mainactivity_mainrelativelayout_button
+		((Button) this.findViewById(R.id.mainactivity_mainrelativelayout_button)).setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				Intent intent = new Intent(MainActivity.this, RelativeLayoutMainActivity.class);
+				startActivity(intent);
+			}
+		});
 	}
 
 	@Override

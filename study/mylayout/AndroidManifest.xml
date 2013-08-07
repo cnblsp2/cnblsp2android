@@ -66,6 +66,10 @@
             android:name="com.cnblsp2.study.mylayout.absolutelayout.AbsoluteLayoutLoginActivity"
             android:label="AbsoluteLayoutLoginActivity" >
         </activity>
+        <activity
+            android:name="com.cnblsp2.study.mylayout.tablelayout.Example360IndexActivity"
+            android:label="Example360IndexActivity" >
+        </activity>
     </application>
 
 </manifest>

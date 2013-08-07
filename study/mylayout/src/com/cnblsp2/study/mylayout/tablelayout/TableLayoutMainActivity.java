@@ -26,6 +26,15 @@ public class TableLayoutMainActivity extends Activity {
 			}
 		});
 
+		// tablelayoutactivity_360index_btn
+		((Button) this.findViewById(R.id.tablelayoutactivity_360index_btn)).setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				Intent intent = new Intent(TableLayoutMainActivity.this, Example360IndexActivity.class);
+				startActivity(intent);
+			}
+		});
+
 	}
 
 }

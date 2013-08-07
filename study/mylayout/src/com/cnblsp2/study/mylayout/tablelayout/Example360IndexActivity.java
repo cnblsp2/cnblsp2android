@@ -11,7 +11,8 @@ public class Example360IndexActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
-		this.setContentView(R.layout.activity_tablelayout_360index);
+		// this.setContentView(R.layout.activity_tablelayout_360index);
+		this.setContentView(R.layout.activity_cpic_metting);
 
 	}
 

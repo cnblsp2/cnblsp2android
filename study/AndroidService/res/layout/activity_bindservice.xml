@@ -1,0 +1,25 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <Button
+        android:id="@+id/bindservice_activity_bindservice_btn"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="bindservice_activity_bindservice_btn" />
+
+    <Button
+        android:id="@+id/bindservice_activity_unbindservice_btn"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="bindservice_activity_unbindservice_btn" />
+
+    <Button
+        android:id="@+id/bindservice_activity_getservicestatus_btn"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="bindservice_activity_getservicestatus_btn" />
+
+</LinearLayout>

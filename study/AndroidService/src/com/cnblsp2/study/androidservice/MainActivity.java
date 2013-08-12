@@ -15,15 +15,19 @@ public class MainActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
+
+		((Button) this.findViewById(R.id.mainactivity_startandstopservice_btn)).setOnClickListener(new NewActivityClickListener(this,
+				StartAndStopServiceActivity.class));
+
+		((Button) this.findViewById(R.id.mainactivity_bindservice_btn)).setOnClickListener(new NewActivityClickListener(this,
+				BindServiceActivity.class));
+
 	}
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
 		getMenuInflater().inflate(R.menu.main, menu);
-
-		((Button) this.findViewById(R.id.mainactivity_startandstopservice_btn)).setOnClickListener(new NewActivityClickListener(this,
-				StartAndStopServiceActivity.class));
 
 		return true;
 	}

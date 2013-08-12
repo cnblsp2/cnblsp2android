@@ -26,10 +26,21 @@
             android:name="com.cnblsp2.study.androidservice.StartAndStopServiceActivity"
             android:label="StartAndStopServiceActivity" >
         </activity>
+        
+        <activity 
+            android:name="com.cnblsp2.study.androidservice.BindServiceActivity"
+            android:label="BindServiceActivity"
+            ></activity>
 
         <service android:name="com.cnblsp2.study.androidservice.service.FirstService" >
             <intent-filter>
                 <action android:name="com.cnblsp2.study.AndroidService.FIRST_SERVICE" />
+            </intent-filter>
+        </service>
+        <service android:name="com.cnblsp2.study.androidservice.service.BindService" >
+            <intent-filter >
+                <action android:name="com.cnblsp2.study.androidservice.service.BIND_SERVICE"/>
+                
             </intent-filter>
         </service>
     </application>

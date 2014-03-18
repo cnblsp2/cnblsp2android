@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">android_baidu_demo</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="basemap_btntxt">启动BaseMap</string>
+	
+    <string name="activity_title_basemap">基础地图</string>
+    <string name="activity_desc_basemap">基础地图-描述</string>
+    <string name="key_error">"请在  DemoApplication.java文件输入正确的授权Key！\r\n申请地址：http://dev.baidu.com/wiki/static/imap/key/"</string>
+    
+</resources>

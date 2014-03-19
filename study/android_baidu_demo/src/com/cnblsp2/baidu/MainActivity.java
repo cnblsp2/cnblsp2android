@@ -67,8 +67,13 @@ public class MainActivity extends Activity {
 		MainActivity.this.startActivity(intent);
 	}
 
-	private static final DemoInfo[] demos = { new DemoInfo(R.string.activity_title_basemap,
-			R.string.activity_desc_basemap, BaseMapActivity.class) };
+	private static final DemoInfo[] demos = {
+			new DemoInfo(R.string.activity_title_basemap, R.string.activity_desc_basemap,
+					BaseMapActivity.class),
+			new DemoInfo(R.string.activity_title_fragment, R.string.activity_desc_fragment,
+					MapFragmentDemo.class),
+			new DemoInfo(R.string.activity_title_uisetting, R.string.activity_desc_uisetting,
+					UISettingDemo.class) };
 
 	private class DemoListAdapter extends BaseAdapter {
 

@@ -68,7 +68,8 @@ public class BaseMapActivity extends Activity {
 			Bundle b = intent.getExtras();
 			geoPoint = new GeoPoint(b.getInt("x"), b.getInt("y"));
 		} else {
-			geoPoint = new GeoPoint((int) (cLat * 1E6), (int) (cLon * 1E6));
+//			geoPoint = new GeoPoint((int) (MainApplication.default_y * 1E6), (int) (MainApplication.default_x * 1E6));
+			geoPoint = MainApplication.newDefaultGeoPoint();
 		}
 
 		mMapController.setCenter(geoPoint);

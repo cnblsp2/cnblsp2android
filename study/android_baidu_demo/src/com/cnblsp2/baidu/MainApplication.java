@@ -8,8 +8,12 @@ import android.widget.Toast;
 import com.baidu.mapapi.BMapManager;
 import com.baidu.mapapi.MKGeneralListener;
 import com.baidu.mapapi.map.MKEvent;
+import com.baidu.platform.comapi.basestruct.GeoPoint;
 
 public class MainApplication extends Application {
+
+	public static final double default_x = 113.341128;
+	public static final double default_y = 23.147469;
 
 	private static final String TAG_LOG = MainApplication.class.getName();
 
@@ -17,6 +21,13 @@ public class MainApplication extends Application {
 	protected BMapManager mBMapManager = null;
 	public boolean m_bKeyRight = true;
 	public static final String strKey = "mzLcHMU6KV344QSoznpkMzNj";
+
+	public static GeoPoint newDefaultGeoPoint() {
+
+		return new GeoPoint((int) (MainApplication.default_y * 1E6),
+				(int) (MainApplication.default_x * 1E6));
+
+	}
 
 	@Override
 	public void onCreate() {
@@ -44,7 +55,7 @@ public class MainApplication extends Application {
 
 		@Override
 		public void onGetNetworkState(int iError) {
-			Log.i(TAG_LOG, "onGetNetworkState() --------> 【"+iError+"】");
+			Log.i(TAG_LOG, "onGetNetworkState() --------> 【" + iError + "】");
 			if (iError == MKEvent.ERROR_NETWORK_CONNECT) {
 				Toast.makeText(MainApplication.getInstance().getApplicationContext(), "您的网络出错啦！",
 						Toast.LENGTH_LONG).show();
@@ -56,7 +67,7 @@ public class MainApplication extends Application {
 
 		@Override
 		public void onGetPermissionState(int iError) {
-			Log.i(TAG_LOG, "onGetPermissionState() --------> 【"+iError+"】");
+			Log.i(TAG_LOG, "onGetPermissionState() --------> 【" + iError + "】");
 			if (iError != 0) {
 				Toast.makeText(MainApplication.getInstance().getApplicationContext(),
 						"请在MainApplication.java文件输入正确的授权KEY,并检查您的网络连接是否正常!二楼error : " + iError,

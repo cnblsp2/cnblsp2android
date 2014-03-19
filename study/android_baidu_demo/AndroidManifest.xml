@@ -74,6 +74,10 @@
         </activity>
         <activity android:name="com.cnblsp2.baidu.BaseMapActivity" >
         </activity>
+        <activity android:name="com.cnblsp2.baidu.MapFragmentDemo" >
+        </activity>
+        <activity android:name="com.cnblsp2.baidu.UISettingDemo" >
+        </activity>
     </application>
 
     <supports-screens

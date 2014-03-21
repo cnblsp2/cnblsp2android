@@ -20,15 +20,15 @@ import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.ListView;
-import android.widget.TextView;
-import android.widget.Toast;
+
+import com.cnblsp2.ui.actionbar.fragment.AddressListFragment;
+import com.cnblsp2.ui.actionbar.fragment.ChatFragment;
+import com.cnblsp2.ui.actionbar.fragment.FoundFragment;
 
 public class MainActivity extends ActionBarActivity implements ActionBar.TabListener {
-
 	/**
 	 * The {@link android.support.v4.view.PagerAdapter} that will provide
 	 * fragments for each of the sections. We use a
@@ -38,7 +38,6 @@ public class MainActivity extends ActionBarActivity implements ActionBar.TabList
 	 * {@link android.support.v4.app.FragmentStatePagerAdapter}.
 	 */
 	SectionsPagerAdapter mSectionsPagerAdapter;
-
 	/**
 	 * The {@link ViewPager} that will host the section contents.
 	 */
@@ -48,8 +47,7 @@ public class MainActivity extends ActionBarActivity implements ActionBar.TabList
 
 	private boolean popupState = false;
 
-	private ActivityItem[] items = new ActivityItem[] {
-			new ActivityItem("location", "location......", R.drawable.ic_action_location, null),
+	private ActivityItem[] items = new ActivityItem[] { new ActivityItem("location", "location......", R.drawable.ic_action_location, null),
 			new ActivityItem("location", "refresh......", R.drawable.ic_action_refresh, null),
 			new ActivityItem("settings", "settings.......", R.drawable.ic_action_settings, null) };
 
@@ -87,9 +85,9 @@ public class MainActivity extends ActionBarActivity implements ActionBar.TabList
 			// the adapter. Also specify this Activity object, which implements
 			// the TabListener interface, as the callback (listener) for when
 			// this tab is selected.
-			actionBar.addTab(actionBar.newTab().setText(mSectionsPagerAdapter.getPageTitle(i))
-					.setTabListener(this));
+			actionBar.addTab(actionBar.newTab().setText(mSectionsPagerAdapter.getPageTitle(i)).setTabListener(this));
 		}
+
 	}
 
 	@Override
@@ -153,7 +151,21 @@ public class MainActivity extends ActionBarActivity implements ActionBar.TabList
 			// getItem is called to instantiate the fragment for the given page.
 			// Return a PlaceholderFragment (defined as a static inner class
 			// below).
-			return PlaceholderFragment.newInstance(position + 1);
+			// return PlaceholderFragment.newInstance(position + 1);
+			// return ChatFragment.newInstance(R.layout.fragment_main,
+			// position);
+
+			switch (position) {
+			case 0:
+				return ChatFragment.newInstance(R.layout.fragment_chat, position);
+			case 1:
+				return FoundFragment.newInstance(R.layout.fragment_found, position);
+			case 2:
+				return AddressListFragment.newInstance(R.layout.fragment_addresslist, position);
+			default:
+				return null;
+			}
+
 		}
 
 		@Override
@@ -177,45 +189,10 @@ public class MainActivity extends ActionBarActivity implements ActionBar.TabList
 		}
 	}
 
-	/**
-	 * A placeholder fragment containing a simple view.
-	 */
-	public static class PlaceholderFragment extends Fragment {
-		/**
-		 * The fragment argument representing the section number for this
-		 * fragment.
-		 */
-		private static final String ARG_SECTION_NUMBER = "section_number";
-
-		/**
-		 * Returns a new instance of this fragment for the given section
-		 * number.
-		 */
-		public static PlaceholderFragment newInstance(int sectionNumber) {
-			PlaceholderFragment fragment = new PlaceholderFragment();
-			Bundle args = new Bundle();
-			args.putInt(ARG_SECTION_NUMBER, sectionNumber);
-			fragment.setArguments(args);
-			return fragment;
-		}
-
-		public PlaceholderFragment() {
-		}
-
-		@Override
-		public View onCreateView(LayoutInflater inflater, ViewGroup container,
-				Bundle savedInstanceState) {
-			View rootView = inflater.inflate(R.layout.fragment_main, container, false);
-			TextView textView = (TextView) rootView.findViewById(R.id.section_label);
-			textView.setText(Integer.toString(getArguments().getInt(ARG_SECTION_NUMBER)));
-			return rootView;
-		}
-	}
-
 	protected void showPop() {
 		LayoutInflater inflater = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 		View view = inflater.inflate(R.layout.activity_main_actions, null);
-		
+
 		ListView listView = (ListView) view.findViewById(R.id.more_actions_listv);
 		listView.setAdapter(new BaseActivityAdapter(MainActivity.this, items));
 		popupDialog = new Dialog(MainActivity.this);
@@ -228,14 +205,13 @@ public class MainActivity extends ActionBarActivity implements ActionBar.TabList
 		ActionBar maActionBar = getSupportActionBar();
 		int actionBarHeight = maActionBar.getHeight();
 		if (getTheme().resolveAttribute(android.R.attr.actionBarSize, tv, true)) {
-			actionBarHeight = TypedValue.complexToDimensionPixelSize(tv.data, getResources()
-					.getDisplayMetrics());
+			actionBarHeight = TypedValue.complexToDimensionPixelSize(tv.data, getResources().getDisplayMetrics());
 		}
 		WindowManager.LayoutParams wmlp = popupDialog.getWindow().getAttributes();
 		wmlp.gravity = Gravity.TOP | Gravity.RIGHT;
 		wmlp.x += 12;
 		wmlp.y += actionBarHeight;
-		wmlp.width = 200;
+		wmlp.width = 220;
 		popupDialog.getWindow().setAttributes(wmlp);
 		popupDialog.show();
 

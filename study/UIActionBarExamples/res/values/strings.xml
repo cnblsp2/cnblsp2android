@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">微信</string>
+    <string name="title_section1">聊天</string>
+    <string name="title_section2">发现</string>
+    <string name="title_section3">通讯录</string>
+    <string name="action_location">location</string>
+    <string name="action_refresh">refresh</string>
+    <string name="action_settings">settings</string>
+    <string name="action_overflow">overflow</string>
+	
+    <string name="menu_remove">Remove</string>
+    <string name="content_open_popup">Open Popup Menu</string>
+    
+</resources>

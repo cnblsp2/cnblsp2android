@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.cnblsp2.inputcontrol"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="11"
+        android:targetSdkVersion="14" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.cnblsp2.inputcontrol.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.cnblsp2.inputcontrol.ButtonsActivity"
+            android:label="@string/title_activity_buttons" >
+        </activity>
+        <activity
+            android:name="com.cnblsp2.inputcontrol.TextFieldActivity"
+            android:label="@string/title_activity_text_field" >
+        </activity>
+        <activity
+            android:name="com.cnblsp2.inputcontrol.CheckBoxsActivity"
+            android:label="@string/title_activity_check_boxs" >
+        </activity>
+        <activity
+            android:name="com.cnblsp2.inputcontrol.SpinnersActivity"
+            android:label="@string/title_activity_spinners" >
+        </activity>
+    </application>
+
+</manifest>
